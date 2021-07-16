@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Store_Management_System.Models
 {
@@ -18,5 +19,12 @@ namespace Store_Management_System.Models
         public List<ProductCategory> productCategories { get; set; }
         public List<Supplier>suppliers { get; set; }
 
+    }
+    public class ProductPhoto
+    {
+        [Key, ForeignKey("Product")]
+        public int ProductId { get; set; }
+        public virtual Product Product { get; set; }
+        public string ProductImage { get; set; }
     }
 }

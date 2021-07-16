@@ -19,9 +19,15 @@ namespace Store_Management_System.Data
         public DbSet<Manager> managers { get; set; }
         public DbSet<Job> jobs { get; set; }
         public DbSet<Customer> customers { get; set; }
+        public DbSet<CustomerPhoto> customerPhotos { get; set; }
         public DbSet<Product> products { get; set; }
+        public DbSet<ProductPhoto> productPhotos { get; set; }
         public DbSet<ProductCategory> productCategories { get; set; }
         public DbSet<Supplier> suppliers { get; set; }
-       
+        public DbSet<SalesItem> salesItems { get; set; }
+
+
+
+
     }
 }
