@@ -12,13 +12,35 @@
                     <img style="width:40px;height:40px; object-fit:cover; border-radius:30px" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))">
                 }
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
-            </li>
-            <li class="nav-item">
-                <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                    <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
-                </form>
+
+            <li class="nav-item dropdown no-arrow user-info">
+
+
+
+
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                    <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Hello <span class="text-danger">@User.Identity.Name!  <i class="fas fa-chevron-down"></i> </span>  </span>
+
+                </a>
+
+
+                <!-- Dropdown - User Information -->
+
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                     aria-labelledby="userDropdown">
+
+                    <a class=" dropdown-item nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Profile</a>
+
+
+
+                    <div class="dropdown-divider"></div>
+
+                    <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button type="submit" class="nav-link btn btn-link text-danger text-dark">Logout</button>
+                    </form>
+                </div>
             </li>
         }
         else

@@ -47,5 +47,39 @@ namespace Store_Management_System.Data
                 entity.ToTable("UserTokens");
             });
         }
+
+        public DbSet<Store_Management_System.Models.Bill> Bills { get; set; }
+
+        public DbSet<Store_Management_System.Models.BillType> BillTypes { get; set; }
+
+        public DbSet<Store_Management_System.Models.Branch> Branchs { get; set; }
+
+        public DbSet<Store_Management_System.Models.Customer> Customers { get; set; }
+
+        public DbSet<Store_Management_System.Models.CustomerType> CustomerTypes { get; set; }
+
+        public DbSet<Store_Management_System.Models.GoodsReceivedNote> GoodsReceivedNotes { get; set; }
+
+
+        public DbSet<Store_Management_System.Models.Product> Products { get; set; }
+
+        public DbSet<Store_Management_System.Models.ProductCategory> ProductTypes { get; set; }
+        public DbSet<Store_Management_System.Models.ProductPhoto> ProductPhotos { get; set; }
+
+        public DbSet<Store_Management_System.Models.PurchaseOrder> PurchaseOrders { get; set; }
+
+        public DbSet<Store_Management_System.Models.PurchaseOrderLine> PurchaseOrderLines { get; set; }
+
+        public DbSet<Store_Management_System.Models.PurchaseType> PurchaseTypes { get; set; }
+
+        public DbSet<Store_Management_System.Models.SalesOrder> SalesOrders { get; set; }
+
+        public DbSet<Store_Management_System.Models.SalesOrderLine> SalesOrderLines { get; set; }
+
+        public DbSet<Store_Management_System.Models.SalesType> SalesTypes { get; set; }
+
+        public DbSet<Store_Management_System.Models.Vendor> Vendors { get; set; }
+
+        public DbSet<Store_Management_System.Models.VendorType> VendorTypes { get; set; }
     }
 }
